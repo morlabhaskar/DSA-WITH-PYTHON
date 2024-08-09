@@ -1,6 +1,6 @@
-arr = [2,5,4,6,9,8,7,2,3,]
+arr = [5,4,6,9,8,7,2,3,]
 n = len(arr)
-x = 1
+x = 2
 
 def LinearSearch(arr,n,x):
     for i in range(n):
