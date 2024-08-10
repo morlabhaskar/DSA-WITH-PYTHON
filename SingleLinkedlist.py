@@ -39,6 +39,17 @@ class LinkedList:
         node = Node(data,self.head)
         self.head = node
 
+    #Insersion at End of Linked List
+    def insert_at_end(self,data):
+        if self.head is None:
+            self.head = Node(data)
+            return 
+        itr = self.head
+        while itr.next:
+            itr = itr.next
+        itr.next = Node(data)
+
+
 ll = LinkedList()
 #Nodes
 ll.head = Node(1)
@@ -53,7 +64,15 @@ third.next = fourth
 
 #Function Call
 
+#1,2,3,4
 ll.print()
-ll.Insert_at_begining(10)
-ll.print()
+
+#len = 4
 ll.get_length()
+
+#insert 10 at start
+ll.Insert_at_begining(10)
+
+#Insert 5 at end
+ll.insert_at_end(5)
+ll.print()
