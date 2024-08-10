@@ -63,7 +63,12 @@
 # --> Bubble Sort
         # it is a simple A . N no.of elements array each number is compared to next number firt number is less than next number its ok otherwise swap that two numbers.
         # in the bubble sort at each iteration largest number is placed last in the array.
-        
+
+
+
+# --> Selection Sort
+        # find minimum number in the array then swap min element and first element in the array
+
 
 
 
