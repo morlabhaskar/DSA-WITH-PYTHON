@@ -67,7 +67,22 @@
 
 
 # --> Selection Sort
-        # find minimum number in the array then swap min element and first element in the array
+        # find minimum number in the array then swap min element and first element in the array.
+
+
+
+
+# -->Linked List
+        # -Creation
+        # -Traversing
+        # -Insertion
+        # -Deletion
+
+
+        # Types of Linked List :--
+                # 1.Singly Linked List
+                # 2.Doubly Linked List
+                # 3.Circular Linked List
 
 
 
