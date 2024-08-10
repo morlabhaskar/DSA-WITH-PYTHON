@@ -54,6 +54,16 @@
 
 
 
+# --> Binary Search A
+        # finding an element's position in a sorted array
+        # it is implemented two ways
+                # 1.Itetative Method
+                # 2.Recursive Method
+
+# --> Bubble Sort
+        # it is a simple A . N no.of elements array each number is compared to next number firt number is less than next number its ok otherwise swap that two numbers.
+        # in the bubble sort at each iteration largest number is placed last in the array.
+        
 
 
 
