@@ -7,6 +7,8 @@ class Node:
 
 #Creating Linked List
 class LinkedList:
+
+    #Creating Linked List
     def __init__(self):
         self.head = None
     
@@ -21,7 +23,6 @@ class LinkedList:
             # llstr += str(itr.data) + '----->' if itr.next else str(itr.data)
             llstr += str(itr.data) +( '----->' if itr.next else "")
             itr = itr.next
-
         print(llstr)
 
     #Traversing the Linked List
@@ -32,6 +33,11 @@ class LinkedList:
             count += 1
             itr = itr.next
         print(count)
+
+    #Insersion at Begining of linked List
+    def Insert_at_begining(self,data):
+        node = Node(data,self.head)
+        self.head = node
 
 ll = LinkedList()
 #Nodes
@@ -46,5 +52,8 @@ second.next = third
 third.next = fourth
 
 #Function Call
+
+ll.print()
+ll.Insert_at_begining(10)
 ll.print()
 ll.get_length()
