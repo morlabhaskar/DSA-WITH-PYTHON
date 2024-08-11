@@ -73,16 +73,25 @@
 
 
 # -->Linked List
-        # -Creation
-        # -Traversing
-        # -Insertion
-        # -Deletion
-
 
         # Types of Linked List :--
                 # 1.Singly Linked List
+                        # -Creation
+                        # -Traversing
+                        # -Insertion
+                        # -Deletion
+
                 # 2.Doubly Linked List
+                        # -Creation
+                        # -Traversing
+                        # -Insertion
+                        # -Deletion
+
                 # 3.Circular Linked List
+                        # -Creation
+                        # -Traversing
+                        # -Insertion
+                        # -Deletion
 
 
 

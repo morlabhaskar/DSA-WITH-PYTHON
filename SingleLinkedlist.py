@@ -92,6 +92,26 @@ class LinkedList:
         itr.next = None
 
 
+    #Deleting a Node at Perticular Index
+    def delete_at(self,index):
+        if index < 0 or index >= self.get_length():
+            raise Exception("Invalid Index")
+        
+        if index == 0:
+            self.delete_at_begining()
+            return
+        
+        count = 0
+        itr = self.head
+
+        while itr:
+            if count == index:
+                itr.next = itr.next.next
+                break
+            itr = itr.next
+            count += 1
+
+
 
 ll = LinkedList()
 #Nodes
@@ -99,11 +119,15 @@ ll.head = Node(1)
 second = Node(2)
 third = Node(3)
 fourth = Node(4)
+five = Node(5)
+six = Node(6)
 
 #combine three Nodes
 ll.head.next = second
 second.next = third
 third.next = fourth
+fourth.next = five
+five.next = six
 
 #Function Call
 
@@ -127,4 +151,8 @@ ll.delete_at_begining()
 
 # Delete Node at Begining
 ll.delete_at_end()
+
+#Delete Node at Perticular Index
+ll.delete_at(3)
+
 ll.print()
