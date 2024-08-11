@@ -32,7 +32,7 @@ class LinkedList:
         while itr:
             count += 1
             itr = itr.next
-        print(count)
+        return count
 
     #Insersion at Begining of linked List
     def Insert_at_begining(self,data):
@@ -48,6 +48,49 @@ class LinkedList:
         while itr.next:
             itr = itr.next
         itr.next = Node(data)
+
+    #Insersion at Perticular index of linked list
+    def insert_at(self,index,data):
+        if index < 0 or index >= self.get_length():
+            raise Exception("Invalid Index!")
+            # return print("Invalid!")
+        if index == 0:
+            self.Insert_at_begining(data)
+            return
+        
+        count = 0
+        itr = self.head
+        while itr:
+            if count == index-1:
+                node = Node(data,itr.next)
+                itr.next = node
+                break
+            itr = itr.next
+            count += 1
+
+    
+    #Deleting a Node at Begining
+    def delete_at_begining(self):
+        if not self.head:
+            return None
+        temp = self.head
+        self.head = self.head.next
+        temp = None
+
+
+    #Deleting a Node at End
+    def delete_at_end(self):
+        if self.head is None:
+            return None
+        if self.head.next == None:
+            self.head = None
+            return 
+        
+        itr = self.head
+        while itr.next.next:
+            itr = itr.next
+        itr.next = None
+
 
 
 ll = LinkedList()
@@ -65,14 +108,23 @@ third.next = fourth
 #Function Call
 
 #1,2,3,4
-ll.print()
+# ll.print()
 
-#len = 4
-ll.get_length()
+#length
+# ll.get_length()
 
 #insert 10 at start
 ll.Insert_at_begining(10)
 
 #Insert 5 at end
 ll.insert_at_end(5)
+
+#Insert data at particular Index
+ll.insert_at(3,10)
+
+# Delete Node at Begining
+ll.delete_at_begining()
+
+# Delete Node at Begining
+ll.delete_at_end()
 ll.print()
