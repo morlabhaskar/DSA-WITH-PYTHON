@@ -21,7 +21,7 @@ class LinkedList:
 
         while itr:
             # llstr += str(itr.data) + '----->' if itr.next else str(itr.data)
-            llstr += str(itr.data) +( '----->' if itr.next else "")
+            llstr += str(itr.data) +" "+( '--->' +" " if itr.next else "")
             itr = itr.next
         print(llstr)
 
@@ -105,11 +105,31 @@ class LinkedList:
         itr = self.head
 
         while itr:
-            if count == index:
+            if count == index-1:
                 itr.next = itr.next.next
                 break
             itr = itr.next
             count += 1
+
+
+    #Search an Element in Singly Linked List
+    def search(self,ele):
+        if self.head is None:
+            print("List is empty")
+            return False
+        
+        itr = self.head
+
+        index = 0
+        while itr:
+            print(f"Checking element: {itr.data}")
+            if itr.data == ele:
+                print(f"Element {ele} found at index {index}")
+                return True
+            itr = itr.next
+            index += 1
+        print("Element not found")
+        return False  #if ele not present in Linked List
 
 
 
@@ -138,21 +158,23 @@ five.next = six
 # ll.get_length()
 
 #insert 10 at start
-ll.Insert_at_begining(10)
+# ll.Insert_at_begining(10)
 
 #Insert 5 at end
-ll.insert_at_end(5)
+# ll.insert_at_end(5)
 
 #Insert data at particular Index
-ll.insert_at(3,10)
+# ll.insert_at(3,10)
 
 # Delete Node at Begining
-ll.delete_at_begining()
+# ll.delete_at_begining()
 
 # Delete Node at Begining
-ll.delete_at_end()
+# ll.delete_at_end()
 
 #Delete Node at Perticular Index
-ll.delete_at(3)
+# ll.delete_at(3)
+
+ll.search(2)
 
 ll.print()
